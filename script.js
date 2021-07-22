@@ -13,7 +13,7 @@ function setGridSize(size) {
 }
 
 function fillGrid(size) {
-    for(let i = 0; i < 256; i++) {
+    for(let i = 0; i < size * size; i++) {
         const tile = document.createElement('div');
         tile.classList.add('tile');
         tile.classList.add('white');

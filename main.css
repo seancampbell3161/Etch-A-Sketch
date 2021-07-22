@@ -4,11 +4,16 @@ html {
 
 #gameBoard {
     display: grid;
+    max-width: 500px;
+    min-height: 500px;
+    margin: 2rem auto;
+}
+
+.container-wrapper {
+    padding: 1em;
 }
 
 .tile {
-    width: 20px;
-    height: 20px;
     border: 1px solid black;
 }
 
@@ -20,10 +25,10 @@ html {
     background: black;
 }
 
-body {
+/* body {
     box-sizing: border-box;
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
