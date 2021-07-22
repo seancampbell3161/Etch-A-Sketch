@@ -1,0 +1,29 @@
+html {
+    box-sizing: border-box;
+}
+
+#gameBoard {
+    display: grid;
+}
+
+.tile {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.white {
+    background: white;
+}
+
+.black {
+    background: black;
+}
+
+body {
+    box-sizing: border-box;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
