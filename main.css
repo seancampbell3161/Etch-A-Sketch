@@ -4,8 +4,8 @@ html {
 
 #gameBoard {
     display: grid;
-    max-width: 500px;
-    min-height: 500px;
+    max-width: 600px;
+    min-height: 600px;
     margin: 2rem auto;
 }
 

@@ -8,9 +8,12 @@ window.addEventListener('load', setDefaultGrid);
 
 button.addEventListener('click', () => {
     removeGrid(gameBoard);
-    // let size = prompt('Enter a new grid size');
-    // setGridSize(size);
-    // fillGrid(size);
+    let size = prompt('Enter a new grid size');
+    while(size > 64) {
+        size = prompt('Please enter a number between 1 and 64');
+    }
+    setGridSize(size);
+    fillGrid(size);
 });
 
 function setDefaultGrid() {
@@ -32,24 +35,18 @@ function fillGrid(size) {
     }
 }
 
+function changeColor(e) {
+    e.target.style.backgroundColor = `rgb(${generateRandomNum()}, ${generateRandomNum()}, ${generateRandomNum()})`;
+}
 
+function generateRandomNum() {
+    return Math.floor(Math.random() * 256);
+}
 
 function removeGrid(container) {
     const divArray = Array.from(container.childNodes);
     divArray.forEach((element) => {
         container.removeChild(element);
-    }); 
+    });
 }
-
-function changeColor(e) {
-    e.target.style.backgroundColor = "black";
-}
-
-
-// divs.forEach(div => div.addEventListener('mouseenter', () => {
-//     div.classList.remove('white');
-//     div.classList.add('black');
-// }));
-
-
 
