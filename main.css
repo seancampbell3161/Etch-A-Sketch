@@ -9,8 +9,14 @@ html {
     margin: 2rem auto;
 }
 
+#sizeButton {
+    position: absolute;
+    left: 48%;
+}
+
 .container-wrapper {
     padding: 1em;
+    margin: 0 auto;
 }
 
 .tile {
@@ -24,11 +30,3 @@ html {
 .black {
     background: black;
 }
-
-/* body {
-    box-sizing: border-box;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */

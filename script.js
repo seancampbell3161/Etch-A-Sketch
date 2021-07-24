@@ -1,7 +1,17 @@
 const gameBoard = document.getElementById('gameBoard');
-const button = document.getElementById('reset');
+const divList = [document.querySelectorAll('tile')];
+const button = document.getElementById('sizeButton');
+
+divList.forEach(element => console.log(element));
 
 window.addEventListener('load', setDefaultGrid);
+
+button.addEventListener('click', () => {
+    removeGrid(gameBoard);
+    // let size = prompt('Enter a new grid size');
+    // setGridSize(size);
+    // fillGrid(size);
+});
 
 function setDefaultGrid() {
     setGridSize(16);
@@ -22,12 +32,19 @@ function fillGrid(size) {
     }
 }
 
+
+
+function removeGrid(container) {
+    const divArray = Array.from(container.childNodes);
+    divArray.forEach((element) => {
+        container.removeChild(element);
+    }); 
+}
+
 function changeColor(e) {
     e.target.style.backgroundColor = "black";
 }
 
-
-const divs = document.querySelectorAll('.tile');
 
 // divs.forEach(div => div.addEventListener('mouseenter', () => {
 //     div.classList.remove('white');
